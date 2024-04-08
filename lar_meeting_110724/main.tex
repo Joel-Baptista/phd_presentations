@@ -1,0 +1,137 @@
+\documentclass[10pt,xcolor={dvipsnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usetheme{Copenhagen}
+\usecolortheme{seagull}
+
+%\usepackage{media9}
+\usepackage{multimedia}
+
+\usepackage{booktabs,siunitx}
+\usepackage{multirow}
+\usepackage[flushleft]{threeparttable}
+
+
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+
+\usepackage{animate}
+
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\usetikzlibrary{shapes,
+                tikzmark}
+\tikzset{every tikzmarknode/.style={%
+        draw=red, semithick, inner sep=2pt}
+        % invisible/.style={opacity=0},
+        % tikzmarknode/.style={opacity=1},
+        % alt/.code args={<#1>#2#3}{%
+        % \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+        % },
+        }
+
+\tiny\bibliography{references.bib}
+\usetikzlibrary{calc}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argminB}{argmin}
+
+\definecolor{red}{rgb}{1.00,0.00,0.00}
+\definecolor{blue}{rgb}{0.00,0.00,1.00}
+\definecolor{dblue}{rgb}{0.00,0.00,0.40}
+\definecolor{green}{rgb}{0.4,1.00,0.0}
+\definecolor{dgreen}{rgb}{0.0,0.40,0.0}
+\definecolor{yellow}{rgb}{0.5,0.5,0.0}
+
+%\renewcommand<>{\item}[1]{\only#2{\beameroriginal{\item}{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+%This block of code defines the information to appear in the
+%Title page
+\title[]
+{\large Meta-Reinforcement Learning and Causality for Multi-tasking in Robots with Redundant Kinematics}
+
+\subtitle{1st Year Update}
+
+\author[Joel Baptista] % (optional)
+{Joel Baptista}
+
+% \institute[VFU] % (optional)
+% {
+%   \inst{1}%
+%   Institute of Electronics and Informatics Engineering of Aveiro\\
+%   University of Aveiro, Portugal
+%   \and
+%   \inst{2}%
+%   Department of Mechanical Engineering\\
+%   University of Aveiro, Portugal
+% }
+
+\date[2024/04/11] % (optional)
+{11/04/2024}
+
+% \begin{block}{}
+% % \cite{DAA}
+% \end{block}
+
+\titlegraphic{\begin{center}
+\begin{tabular}{c}
+%\includegraphics[height=1cm]{img/cytedlogo} &
+\includegraphics[height=1cm]{img/Logo-UA-300x300} 
+\end{tabular}
+\end{center}
+}
+
+\setbeamertemplate{footline}[frame number]
+
+%End of title page configuration block
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This block of code is for the table of contents after
+%the title page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\include{src/01-introduction}
+
+\section{Why Reinforcement Learning?}
+\section{Why Causality?}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
