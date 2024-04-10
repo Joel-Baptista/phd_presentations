@@ -30,6 +30,9 @@ src=#3 % same path as in addresource!
 \usepackage{amsmath}
 \usepackage{stmaryrd}
 
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+
 \usepackage{animate}
 \usepackage{adjustbox}
 
@@ -103,6 +106,7 @@ src=#3 % same path as in addresource!
 }
 
 \setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
 
 %End of title page configuration block
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
@@ -145,6 +149,12 @@ src=#3 % same path as in addresource!
 \section{Why Causality?}
 \include{src/03-why-causality}
 
+\section{Causal Reinforcement Learning}
+\include{src/04-crl}
+
+
+\section{Conclusion}
+\include{src/05-conclusion}
 
 
 
