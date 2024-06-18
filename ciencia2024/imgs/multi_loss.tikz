@@ -1,0 +1,47 @@
+\input{imgs/commontrain.tikz}
+
+\begin{tikzpicture}[font=\sffamily, node distance=0.37cm and 1 cm,scale=1.25,transform shape]
+%Draw all main nodes
+\node [database] (DB) {};
+\node [myNet, right=of DB] (Net) {};
+\node [myMLP, below right=of Net, xshift=+1em, yshift=+0.55em, text width=2.5cm ,align=center,transform shape=false] (MLP) {Classifier\\MLP};
+\node [outLayer, fill=pink,right=of MLP, draw, inner sep=0pt, minimum width=0.75cm, minimum height=2cm] (Out) {}; 
+
+\node [myMLP, above right=of Net, xshift=+1em, yshift=-0.55em,text width=2.5cm,align=center,transform shape=false] (MLP1) {Projection Head\\MLP};
+\node [fill=green!30,right=of MLP1, draw, inner sep=0pt, minimum width=0.75cm, minimum height=2cm] (Out1) {}; 
+\node [fill=white,anchor=center, draw, inner sep=0pt, minimum width=0.3cm, minimum height=1.45cm, at=(Out1.center), label={[above,yshift=-2pt]north:{\scriptsize{64}}}] (Out1In) {}; 
+
+% Draw legends
+\node [
+	below of=Out,
+	yshift=-3em,
+	minimum width=15pt,
+	fill=pink,
+	label={[anchor=east,transform shape=false]west:\small{Cross Entropy Loss}}
+	] (CEL) {};
+
+\node [
+	below of=CEL, 
+	yshift=-0.25em,	
+	minimum width=15pt,
+	fill=green!30,
+	label={[anchor=east,transform shape=false]west:\small{Contrastive Loss}}
+	] (ConL) {};
+
+
+% Draw arrows
+\draw [myA] (DB) -- (Net);
+
+\coordinate (MD) at ($(MLP.west)!0.5!(MLP1.west)$);
+\coordinate (TP) at ($(Net.east)!0.4!(MD)$);
+
+\draw [myA] (Net) -- (TP) |- (MLP);
+\draw [myA] (TP) |- (MLP1);
+\draw [myA] (MLP) -- (Out);
+\draw [myA] (MLP1) -- (Out1In);
+
+\draw [myA, red!80, dashed] (Out.240) to[in=-40,out=-170] (Net.south);
+\draw [myA, green!80, dashed] (Out1.120) to[in=40,out=170] (Net.north)	;
+
+	
+\end{tikzpicture}

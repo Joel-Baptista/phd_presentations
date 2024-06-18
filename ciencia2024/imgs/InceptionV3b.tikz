@@ -1,0 +1,49 @@
+\input{imgs/commontrain.tikz}
+\tikzset{
+myN/.style={
+	draw=blue!50,
+	fill=blue!15,
+	align=center,
+	minimum width=1.6cm,
+	minimum height=1.25cm,
+%	text width=1.5cm,
+	inner sep=0pt,
+	font={\footnotesize\sffamily},
+	},
+ myNt/.style={
+ 	myN,
+ 	draw=red!50,
+ 	fill=red!15,
+ }	
+}
+\begin{tikzpicture}[font=\small\sffamily,node distance=1cm and 0.35cm]
+\node [myN]              (stem) {Stem};
+\node [myN,right=of stem] (IA) {Inception-A\\$\times$3};
+\node [myN,right=of IA]   (IB) {Inception-B};
+\node [myN,right=of IB]   (IC3) {Inception-C\\$\times$3};
+\node [myNt,right=of IC3]  (IC1) {Inception-C\\$\times$1};
+\node [myNt,right=of IC1]  (ID) {Inception-D};
+\node [myNt,right=of ID]  (IE) {Inception-E\\$\times$2};
+\coordinate (MD) at ($(ID.center)!0.5!(IE.center)$);
+\node [myN, minimum height={2em}, draw=gray!50,fill=gray!15,above=of MD ]  (aux) {Aux};
+
+\draw [myA] (stem) -- (IA);
+\draw [myA] (IA) -- (IB);
+\draw [myA] (IB) -- (IC3);
+\draw [myA] (IC3) -- (IC1);
+\draw [myA] (IC1) -- (ID);
+\draw [myA] (ID) -- (IE);
+\draw [myA] ($(IC1)!0.5!(ID)$) |- (aux);
+
+\draw [decorate, decoration = {brace,amplitude=5pt}]  ([yshift=-2pt]IC3.south east) -- coordinate[yshift=-1.5em,midway](NTParams)([yshift=-2pt]stem.south west);
+
+\draw [decorate, decoration = {brace,amplitude=5pt}]  ([yshift=-2pt]IE.south east) -- coordinate[yshift=-1.5em,midway](TParams)([yshift=-2pt]IC1.south west);
+
+\node [at=(NTParams)] (NTP) {Non-trainable parameters};
+\node [at=(TParams)] (TP) {Trainable parameters};
+
+
+\draw [decorate, decoration = {brace,amplitude=4pt}]  ([xshift=2pt]aux.north east) -- coordinate[xshift=0.5em,midway](Nused)([xshift=2pt]aux.south east);
+\node [at=(Nused),anchor=west,inner sep=0,align=center, text width=0.6cm] (NU) {Not\\used};
+
+\end{tikzpicture}

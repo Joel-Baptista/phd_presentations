@@ -1,0 +1,85 @@
+\makeatletter
+\tikzset{
+%from https://tex.stackexchange.com/questions/442991/database-shape-in-tikz/442994#442994
+    database/.style={
+        path picture={
+            \draw (0, 1.5*\database@segmentheight) circle [x radius=\database@radius,y radius=\database@aspectratio*\database@radius];
+            \draw (-\database@radius, 0.5*\database@segmentheight) arc [start angle=180,end angle=360,x radius=\database@radius, y radius=\database@aspectratio*\database@radius];
+            \draw (-\database@radius,-0.5*\database@segmentheight) arc [start angle=180,end angle=360,x radius=\database@radius, y radius=\database@aspectratio*\database@radius];
+            \draw (-\database@radius,1.5*\database@segmentheight) -- ++(0,-3*\database@segmentheight) arc [start angle=180,end angle=360,x radius=\database@radius, y radius=\database@aspectratio*\database@radius] -- ++(0,3*\database@segmentheight);
+        },
+        minimum width=2*\database@radius + \pgflinewidth,
+        minimum height=3*\database@segmentheight + 2*\database@aspectratio*\database@radius + \pgflinewidth,
+    },
+    database segment height/.store in=\database@segmentheight,
+    database radius/.store in=\database@radius,
+    database aspect ratio/.store in=\database@aspectratio,
+    database segment height=0.2cm,
+    database radius=0.5cm,
+    database aspect ratio=0.35,
+}
+\makeatother
+
+\tikzset{
+	myNet/.style=
+	{
+		trapezium,
+		shape border rotate=270,
+		draw,
+		trapezium angle=60,
+		inner sep=2pt,
+		align=center,
+		minimum height=1cm,
+		minimum width=2cm,
+		trapezium stretches=true,
+	%	teal,
+%		fill=teal!20,
+	}, %style for networks	
+	myMLP/.style=
+	{
+		rounded corners=2pt,
+		draw,
+		minimum width=1.5cm,
+	},
+	outLayerC/.style=
+	{
+		path picture=
+		{
+			\foreach \n in {1,...,4}
+			{
+				\draw [fill=white, fill opacity = 1] ($(path picture bounding box.south)!{\n*0.2}!(path picture bounding box.north)$) circle[radius=4pt] coordinate (C\n);
+			}
+			\draw [decorate, decoration = {brace,amplitude=5pt}] ([shift={(-5pt,-5pt)}]C1) -- ([shift={(-5pt,5pt)}]C4);
+		}
+	}, %the out layer
+    outLayerPH/.style=
+	{
+		path picture=
+		{
+            \draw[fill=white, fill opacity = 1] (-0.15,-0.7) rectangle (0.15,0.65) ;
+            \draw[draw] {64} ;
+			\draw [decorate, decoration = {brace,amplitude=5pt}] ([shift={(-5pt,-5pt)}]C1) -- ([shift={(-5pt,5pt)}]C4);
+		}
+	}, %the out layer
+	myA/.style={->,>=stealth,thick}, %line/arrow s
+}
+\begin{tikzpicture}[font=\sffamily,scale=1.25,transform shape]
+\node [database] (DB) {};
+\node [myNet, right=of DB] (Net) {};
+\node [myMLP, below right=of Net] (MLP_c)  {MLP};
+\node [myMLP, above right=of Net] (MLP_ph) {MLP};
+\node [outLayerC, fill=pink,right=of MLP_c, draw, inner sep=0pt, minimum width=0.75cm, minimum height=2cm] (Out_c) {};
+\node [outLayerPH, fill=green, fill opacity=0.2,right=of MLP_ph, draw, inner sep=0pt, minimum width=0.75cm, minimum height=2cm] (Out_ph) {};
+
+\node [below of=Out_c, yshift=-2em, minimum width=15pt,fill=pink, label={[anchor=east, transform shape=false]185:{\small{Cross Entropy Loss}}}] (CEL) {};
+\node [below of=Out_c, yshift=-1em, minimum width=15pt,fill=green, fill opacity = 0.2,label={[anchor=east, transform shape=false]185:{\small{Contrastive Loss}}}] (CL) {};
+
+\draw [myA] (DB) -- (Net);
+\draw [myA] (Net.east) -- (MLP_c.west);
+\draw [myA] (Net.east) -- (MLP_ph.west);
+\draw [myA] (MLP_c) -- (Out_c);
+\draw [myA] (MLP_ph) -- (Out_ph);
+\draw [myA, red!80, dashed,thick] (Out_c.250) to[in=-60,out=180] (Net.south)	;
+\draw [myA, green!100, dashed,thick] (Out_ph.110) to[in=60,out=180] (Net.north)	;
+	
+\end{tikzpicture}

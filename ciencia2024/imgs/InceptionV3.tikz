@@ -1,0 +1,36 @@
+%Common definitions for training approaches
+\makeatletter
+\tikzset{
+	myNet/.style=
+	{
+		trapezium,
+		shape border rotate=270,
+		draw,
+		trapezium angle=60,
+		inner sep=2pt,
+		align=center,
+		minimum height=1cm,
+		minimum width=2cm,
+		trapezium stretches=true,
+	%	teal,
+%		fill=teal!20,
+	}, %style for networks	
+	myMLP/.style=
+	{
+		rounded corners=2pt,
+		draw,
+		minimum width=1.5cm,
+	},
+	outLayer/.style=
+	{
+		path picture=
+		{
+			\foreach \n in {1,...,4}
+			{
+				\draw [fill=white] ($(path picture bounding box.south)!{\n*0.2}!(path picture bounding box.north)$) circle[radius=4pt] coordinate (C\n);
+			}
+			\draw [decorate, decoration = {brace,amplitude=5pt}] ([shift={(-5pt,-5pt)}]C1) -- ([shift={(-5pt,5pt)}]C4);
+		}
+	}, %the out layer
+	myA/.style={->,>=stealth,thick}, %line/arrow s
+}

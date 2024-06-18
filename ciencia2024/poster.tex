@@ -9,7 +9,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=70,height=100,scale=1.0]{beamerposter}
+\usepackage[size=custom,width=70,height=100,scale=0.963]{beamerposter}
+% \usepackage[size=custom,width=70,height=100,scale=0.9]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{gemini}
 \usepackage{graphicx}
@@ -18,6 +19,48 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.14}
 \usepackage{anyfontsize}
+% \usepackage{pgfplotstable}
+% \usepackage{soul}
+
+\usepackage{kinematikz} %requires TeX Live 2022!!
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shapes,arrows,positioning,calc}
+\usetikzlibrary{positioning,backgrounds,patterns}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes.geometric}
+% \sisetup{ detect-family = true, } %to allow sans-serif in math mode units
+\usepackage{ifthen}
+\usetikzlibrary{matrix,calc}
+
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{fillbetween} 
+\usepgfplotslibrary{units}
+
+\newcommand{\graphLineWidth}{0.4mm}
+\newcommand{\pullColor}{red}
+\newcommand{\pushColor}{blue}
+\newcommand{\shakeColor}{green}
+\newcommand{\twistColor}{orange}
+\newcommand{\actionOpacity}{0.10}
+% A base color for the confusion matrix
+\definecolor{cfcolor}{HTML}{042D6E}
+\usepackage{svg}
+
+%Adjust these definitions for adequate consistency in the text. This is an example. You can adjust for better typesetting!
+\newcommand{\pull}{\textsc{pull}}
+\newcommand{\push}{\textsc{push}}
+\newcommand{\shake}{\textsc{shake}}
+\newcommand{\twist}{\textsc{twist}}
+
+\let\comment\undefined % because someone else defines it (amsmath, verbatim, anyone else ...?)
+% \usepackage[commandnameprefix=ifneeded]{changes}
+% \usepackage[final]{changes} % for the final acceptance of all changes
+% \usepackage{enumitem}
+\tikzset{
+   vsblack/.style={
+   black, %force black color override the elsevier template inside tikz figures and plots. Comment this line not to override!
+   }, 
+}
 
 % ====================
 % Lengths
@@ -48,8 +91,8 @@ Training for Hand Gesture Recognition}
 % ====================
 
 \footercontent{
-  \href{}{} \hfill
-  ABC Conference 2025, New York --- XYZ-1234 \hfill
+  \href{https://doi.org/10.3390/s23063332}{https://doi.org/10.3390/s23063332} \hfill
+  \hfill
   \href{mailto:joelbaptista@ua.pt}{joelbaptista@ua.pt}}
 % (can be left out to remove footer)
 
@@ -60,7 +103,7 @@ Training for Hand Gesture Recognition}
 % use this to include logos on the left and/or right side of the header:
 \logoright{\includegraphics[height=10cm, trim={0 0.5cm 0 0}, clip]{img/Ciencia_2024_Horizontal_Branco.png}}
 % \logoright{\includegraphics[height=1cm]{img/Ciencia_2024_Horizontal_Branco.png}}
-\logoleft{\includegraphics[height=9cm, trim={0 0.0 11cm 0}, clip]{img/ieeta.png}}
+\logoleft{\includegraphics[height=9cm, trim={0 0.0 12cm 0}, clip]{img/ieeta.png}}
 
 % ====================
 % Body
@@ -74,67 +117,81 @@ Training for Hand Gesture Recognition}
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block title}
+  \begin{block}{Introduction}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
 
-    \begin{figure}
+    Hand gestures are an important aspect of human communication, serving several purposes 
+    such as enhancing spoken messages, signaling intentions or expressing emotions. 
+    Driven by technological advances, the process of classifying meaningful hand gestures, 
+    known as Hand Gesture Recognition (HGR), has received increasing attention in recent years.
+    
+    The major application areas of gesture recognition include sign language translation, 
+    human-machine interaction, medical rehabilitation, and virtual reality. HGR systems also 
+    target robotic applications using a variety of input devices, among which stands out color
+    cameras, depth sensors or gloves with embedded sensors. In this context, the ability of 
+    robots to recognize hand gestures and other forms of intuitive human interactions \cite{afonso2023} 
+    seems very promising for progress in Human-Robot Collaboration (HRC), 
+    as these gestures are simple and intuitive for a human partner to produce. This, in turn, allows 
+    humans and robots to coexist and cooperate, improving task efficiency and safety. \cite{s21124113}.
+
+
+    However, HGR is an inherently challenging task due to the complex, non-rigid properties of the hand, 
+    such as its shape, color, and orientation. Vision-based HGR systems must also be robust to variations 
+    in lighting conditions, cluttered environments, complex backgrounds, and occlusions. In reality, the
+    assumption that the training and test datasets are drawn from the same distribution rarely holds in
+    practical situations due to domain shifts.
+    
+    To tackle this issue, this paper proposes a domain adaptation technique for hand gesture recognition in 
+    human-robot collaboration scenarios. The proposed approach is based on a two-headed 
+    deep architecture that simultaneously adopts cross-entropy and a contrastive loss from
+    different network branches to classify hand gestures.
+
+  \end{block}
+
+  \begin{block}{Objectives}
+
+    The main goal is to shed light on the impact of supervised contrastive learning (SCL) \cite{DBLP:journals/corr/abs-2004-11362}
+    on the generalization ability of a trained deep model in gesture classification when faced with a distribution shift.
+    For this purpose, the study:
+
+    \begin{itemize}
+      \item Contributes with a new RGB annotated dataset of hand gestures, with a complex background 
+      and multiple subjects.
+      \item Compares the results from the proposed approach against baselines.
+    \end{itemize}
+
+  \end{block}
+
+  \begin{block}{Dataset Description}
+
+    This implementation uses four hand gesture
+    classes inspired by American Sign Language; the symbols chosen are the "A", "F", "L" and 
+    "Y" signs. These signals have the advantage of being well known symbols with already real
+    world applications, implying that they are easy to use. These specific signs were chosen
+    also because they are relatively distinct. 
+
+    To test the degree of generalization of the proposed method, two datasets were recorded.
+    The first dataset was used to train the classification model. This dataset was recorded by one subject, 
+    which can be seen in Figure \autoref{fig:gestures_train}.
+    
+    \begin{figure}[!ht]
       \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
+      \def\vsTW{0.2\textwidth}  %was 0.15\textwidth
+      \setlength{\tabcolsep}{2pt} %to make a shorter separation
+      \newcommand{\vsTE}[1]{\includegraphics[width=\vsTW]{gestures/#1.png}}
+      \begin{tabular}{cccc}
+      A & F & L & Y \\
+      \vsTE{A1} & \vsTE{F1} & \vsTE{L1} & \vsTE{Y1} \\
+      \vsTE{A2} & \vsTE{F2} & \vsTE{L2} & \vsTE{Y2} \\
+      \end{tabular}
+      \caption{Examples of the training dataset of the four hand gesture classes in the unstructured environment and complex background.
+      }
+      \label{fig:gestures_train}
     \end{figure}
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus.
 
   \end{block}
 
-  \begin{block}{A block containing a list}
-
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
-
-    \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
-    \end{itemize}
-
-    Eget augue porta, bibendum venenatis tortor.
-
-  \end{block}
-
-  \begin{alertblock}{A highlighted block}
-
-    This block catches your eye, so \textbf{important stuff} should probably go
-    here.
-
-    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
-    consectetur mauris quam, at finibus elit auctor ac. Aliquam erat volutpat.
-    Aenean at nisl ut ex ullamcorper eleifend et eu augue. Aenean quis velit
-    tristique odio convallis ultrices a ac odio.
-
-    \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
-    \end{itemize}
-
-    Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-
-  \end{alertblock}
 
 \end{column}
 
@@ -142,89 +199,74 @@ Training for Hand Gesture Recognition}
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block containing an enumerated list}
+  \vspace{1.5cm}
+  \justify
 
-    Vivamus congue volutpat elit non semper. Praesent molestie nec erat ac
-    interdum. In quis suscipit erat. \textbf{Phasellus mauris felis, molestie
-    ac pharetra quis}, tempus nec ante. Donec finibus ante vel purus mollis
-    fermentum. Sed felis mi, pharetra eget nibh a, feugiat eleifend dolor. Nam
-    mollis condimentum purus quis sodales. Nullam eu felis eu nulla eleifend
-    bibendum nec eu lorem. Vivamus felis velit, volutpat ut facilisis ac,
-    commodo in metus.
+  The second dataset is used to test the model. This multi-user test dataset was recorded with three subjects
+  who were not included in the training dataset. The dataset was recorded on a different day and at a 
+  different time of day, resulting in variation in luminosity. Figure 2 shows 
+  some samples that constitute the multi-user test dataset.
+  
+  \begin{figure}[!ht]
+    \justify
+    \centering
+    \def\vsTW{0.2\textwidth}  %was 0.15\textwidth
+    \setlength{\tabcolsep}{2pt} %to make a shorter separation
+    \newcommand{\vsTE}[1]{\includegraphics[width=\vsTW]{gestures/#1.png}}
+    \begin{tabular}{cccc}
+    A & F & L & Y \\
+    \vsTE{MU_A2} & \vsTE{MU_F2} & \vsTE{MU_L2} & \vsTE{MU_Y2} \\
+    \vsTE{MU_A3} & \vsTE{MU_F3} & \vsTE{MU_L3} & \vsTE{MU_Y3} \\
+    \end{tabular}
+    \caption{Examples of the test dataset with three different subjects and acquired in a different time of day in relation to the training dataset.\label{fig:gestures_test}}
+  \end{figure}
+  
+  Table \autoref{tab:dataset} shows the distribution of samples among all classes. Although the dataset is small
+  when compared to the large-scale datasets, it has a distribution of samples per class similar to other 
+  static hand gesture datasets used in HGR. Additionally, we apply online data augmentation in the training phase that further help
+  compensate for the reduced number of samples. 
+ 
+  \begin{table}[!ht] 
+    \centering
+    %\newcolumntype{C}{>{\centering\arraybackslash}X}
+    \begin{tabular}{lccccc}
+      \toprule
+      \textbf{Dataset}	& \textbf{A}	& \textbf{F} & \textbf{L} & \textbf{Y} & \textbf{Total}\\
+      \midrule
+      Training dataset & \num{6430} & \num{6148} & \num{5989} & \num{6044} & \textbf{\num{24611}}\\
+      
+      Multi-user test dataset & \num{4183} & \num{4277} & \num{4276} & \num{4316} & \textbf{\num{17051}}\\
+      \bottomrule
+    \end{tabular}
+    \caption{Number of images, per class, of the training dataset and the multi-user test dataset. The training dataset includes one subject and the test dataset includes three subjects.\label{tab:dataset}}
+    % \noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
+  \end{table}
 
-    \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-    \end{enumerate}
+  Both of the datasets were recorded in the collaborative cell \cite{RATO2022497} located in 
+  the Laboratory of Automation and Robotics at the University of Aveiro.
 
-  \end{block}
+  \begin{block}{Methodology}
 
-  \begin{block}{Fusce aliquam magna velit}
+    This section describes the proposed contrastive domain adaptation technique for HGR. 
+    Our goal is to train a model on the source domain and, then, use it to make
+    predictions on the target domain that has different characteristics, namely, different subjects
+    and illumination conditions. We compare this approach with traditional transfer learning methods, that 
+    consists of the Inception-v3 pre-trained model that is repurposed
+    for the specific hand gesture classification task involving four classes.
 
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
+    SCL has been shown to be effective for domain adaptation, 
+    because it can help the model to learn features that are invariant to domain shifts \cite{Scalbert2021}.
+    
+    The idea behind the proposed contrastive domain adaptation technique is to use a network that 
+    branches twice after the encoder model (dual-branch head), allowing to train the representation 
+    model and the classification model simultaneously. Figure \autoref{fig:multi_loss} shows the model architecture.
 
-    \begin{figure}
+    \begin{figure}[!ht]
       \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
-
-  \end{block}
-
-  \begin{block}{Nam cursus consequat egestas}
-
-    Nulla eget sem quam. Ut aliquam volutpat nisi vestibulum convallis. Nunc a
-    lectus et eros facilisis hendrerit eu non urna. Interdum et malesuada fames
-    ac ante \textit{ipsum primis} in faucibus. Etiam sit amet velit eget sem
-    euismod tristique. Praesent enim erat, porta vel mattis sed, pharetra sed
-    ipsum. Morbi commodo condimentum massa, \textit{tempus venenatis} massa
-    hendrerit quis. Maecenas sed porta est. Praesent mollis interdum lectus,
-    sit amet sollicitudin risus tincidunt non.
-
-    Etiam sit amet tempus lorem, aliquet condimentum velit. Donec et nibh
-    consequat, sagittis ex eget, dictum orci. Etiam quis semper ante. Ut eu
-    mauris purus. Proin nec consectetur ligula. Mauris pretium molestie
-    ullamcorper. Integer nisi neque, aliquet et odio non, sagittis porta justo.
-
-    \begin{itemize}
-      \item \textbf{Sed consequat} id ante vel efficitur. Praesent congue massa
-        sed est scelerisque, elementum mollis augue iaculis.
-        \begin{itemize}
-          \item In sed est finibus, vulputate
-            nunc gravida, pulvinar lorem. In maximus nunc dolor, sed auctor eros
-            porttitor quis.
-          \item Fusce ornare dignissim nisi. Nam sit amet risus vel lacus
-            tempor tincidunt eu a arcu.
-          \item Donec rhoncus vestibulum erat, quis aliquam leo
-            gravida egestas.
-        \end{itemize}
-      \item \textbf{Sed luctus, elit sit amet} dictum maximus, diam dolor
-        faucibus purus, sed lobortis justo erat id turpis.
-      \item \textbf{Pellentesque facilisis dolor in leo} bibendum congue.
-        Maecenas congue finibus justo, vitae eleifend urna facilisis at.
-    \end{itemize}
+      % \input{imgs/multi_loss.tikz}
+      \includegraphics[width=\textwidth]{img/architecture.png}
+      \caption{Model's architecture. The losses used are the contrastive loss and the Cross Entropy Loss. \label{fig:multi_loss}}
+    \end{figure} 
 
   \end{block}
 
@@ -234,75 +276,90 @@ Training for Hand Gesture Recognition}
 
 \begin{column}{\colwidth}
 
-  \begin{exampleblock}{A highlighted block containing some math}
+  \begin{exampleblock}{Contrastive Learning}
 
-    A different kind of highlighted block.
+    In Contrastive Learning we use a contrastive loss, defined by:
 
-    $$
-    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-    $$
+    \begin{equation}
+      C_{loss} = \sum_{i \in B} \frac{-1}{p} \sum_{j \in P(i)} \log \frac{e^{(v_i \cdot v_j) / \tau}}{\sum\limits_{a \in A(i)} e^{(v_i \cdot v_a) / \tau}}
+      \label{eq:con_loss}\text{,}
+    \end{equation}
 
-    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
-    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
-    felis id vulputate.
+    This loss function encourages the base model to produce
+    similar feature vectors in the same class and dissimilar feature vectors in 
+    different classes.
 
-    \heading{A heading inside a block}
+    \heading{Variables}
 
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
-
-    \heading{Another heading inside a block}
-
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
+    Each batch $B$ has $v_i$ feature vectors. The set $P(i)$ 
+    represents the indexes of the positive samples $j$ in relation to an anchor 
+    sample $i$, and it has a size of $p$. A sample is classified as positive when 
+    it belongs to the same class as the anchor. The set $A(i)$ includes all
+    the indexes of $B$ except $i$. The exponents exhibit the dot product between 
+    two feature vectors divided by a scalar temperature parameter $\tau$.
 
   \end{exampleblock}
+  \begin{block}{Results}
 
-  \begin{block}{Nullam vel erat at velit convallis laoreet}
+    \def\globalCMscale{1.9}
+    % \begin{figure}[!ht]
+    %   \centering
+    %   \input{cm/cm_normal.tikz}%
+    %   % \input{cm/cm_multi_stage.tikz}%
+    %   \input{cm/cm_multi_loss.tikz}
+    %   \caption{Confusion Matrices of results, in percentage (\%), obtained by training all both models with the single user dataset and testing them with the multi-user dataset with different persons not present in the training dataset; the models are: SLT (left), MSMLT (middle) and SMLT (right).}
+    %   \label{fig:cm_normal}
+    % \end{figure}
 
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos. Phasellus libero enim, gravida sed erat sit amet,
-    scelerisque congue diam. Fusce dapibus dui ut augue pulvinar iaculis.
-
-    \begin{table}
+    \begin{figure}[!ht]
+      \justify
       \centering
-      \begin{tabular}{l r r c}
+      \def\vsTW{0.2\textwidth}  %was 0.15\textwidth
+      \setlength{\tabcolsep}{2pt} %to make a shorter separation
+      \newcommand{\vsTE}[1]{\includegraphics[width=\vsTW]{gestures/#1.png}}
+      \begin{tabular}{cc}
+      \hspace{25mm} Baseline & \hspace{17mm} Our Approach \\
+      \input{cm/cm_normal.tikz} & \input{cm/cm_multi_loss.tikz} \\
+      \end{tabular}
+      \caption{Examples of the test dataset with three different subjects and acquired in a different time of day in relation to the training dataset.\label{fig:gestures_test}}
+    \end{figure}
+
+    \begin{table}[!ht] 
+      \centering
+      %\newcolumntype{C}{>{\centering\arraybackslash}X}
+      \begin{tabular}{lcccc}
         \toprule
-        \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
+        \textbf{Model}	& \textbf{Accuracy}	& \textbf{Recall} & \textbf{Precision} & \textbf{F1}\\
         \midrule
-        Foo & 13.37 & 384,394 & $\alpha$ \\
-        Bar & 2.17 & 1,392 & $\beta$ \\
-        Baz & 3.14 & 83,742 & $\delta$ \\
-        Qux & 7.59 & 974 & $\gamma$ \\
+        Baseline & 84.23	& 84.15 & 86.82 & 84.07\\
+        Our approach & \textbf{90.03} & \textbf{89.97} & \textbf{90.96} & \textbf{90.12} \\
         \bottomrule
       \end{tabular}
-      \caption{A table caption.}
-    \end{table}
-
-    Donec quis posuere ligula. Nunc feugiat elit a mi malesuada consequat. Sed
-    imperdiet augue ac nibh aliquet tristique. Aenean eu tortor vulputate,
-    eleifend lorem in, dictum urna. Proin auctor ante in augue tincidunt
-    tempor. Proin pellentesque vulputate odio, ac gravida nulla posuere
-    efficitur. Aenean at velit vel dolor blandit molestie. Mauris laoreet
-    commodo quam, non luctus nibh ullamcorper in. Class aptent taciti sociosqu
-    ad litora torquent per conubia nostra, per inceptos himenaeos.
-
-    Nulla varius finibus volutpat. Mauris molestie lorem tincidunt, iaculis
-    libero at, gravida ante. Phasellus at felis eu neque suscipit suscipit.
-    Integer ullamcorper, dui nec pretium ornare, urna dolor consequat libero,
-    in feugiat elit lorem euismod lacus. Pellentesque sit amet dolor mollis,
-    auctor urna non, tempus sem.
+      \caption{Evaluation metrics for testing the both approaches in the multi-user test dataset. These values are the average of the metrics calculated for each class.\label{tab:metrics}}
+      % \noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
+      \end{table}
 
   \end{block}
+
+  \begin{block}{Conclusions}
+
+    The focus of this study was the generalization capacity of the model, which was tested using the multi-user
+    test dataset. In this testing phase, the results show that joining cross entropy loss and contrastive loss in a
+    multi-loss training approach helps the model reach higher accuracy. In fact, this approach
+    performed an increase of 6\% in the accuracy of the model, compared to the traditional transfer learning
+    method of training the model only with the CEL. This shows that contrastive learning is
+    focused on learning task-specific and invariant features, being more effective to deal with the domain shift
+    problem.
+
+  \end{block}
+
 
   \begin{block}{References}
 
-    \nocite{*}
+    % \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    % \input{bib}
+
 
   \end{block}
 

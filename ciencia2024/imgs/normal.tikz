@@ -1,0 +1,16 @@
+\input{imgs/commontrain.tikz}
+
+%---- graph 1
+\begin{tikzpicture}[font=\sffamily,scale=1.25, transform shape]
+\node [database] (DB) {};
+\node [myNet, right=of DB] (Net) {};
+\node [myMLP, right=of Net, text width=1.5cm,align=center,transform shape=false] (MLP) {Classifier\\MLP};
+\node [outLayer, fill=pink,right=of MLP, draw, inner sep=0pt, minimum width=0.75cm, minimum height=2cm] (Out) {}; 
+\node [below of=Out, yshift=-1em, minimum width=15pt,fill=pink, label={[anchor=east, transform shape=false]185:{\small{Cross Entropy Loss}}}] (CEL) {};
+\draw [myA] (DB) -- (Net);
+\draw [myA] (Net) -- (MLP);
+\draw [myA] (MLP) -- (Out);
+\draw [myA, red!80, dashed,thick] (Out.120) to[in=10,out=170] (Net.north)	;
+	
+\end{tikzpicture}
+

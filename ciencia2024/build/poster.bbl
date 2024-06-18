@@ -1,8 +1,33 @@
 \begin{thebibliography}{1}
 
-\bibitem{shannon1948communication}
-Claude~E. Shannon.
-\newblock A mathematical theory of communication.
-\newblock {\em Bell System Technical Journal}, 27(3):379--423, 1948.
+\bibitem{afonso2023}
+Afonso Castro, Joel Baptista, Filipe Silva, and Vitor Santos.
+\newblock Classification of handover interaction primitives in a cobot–human
+  context with a deep neural network.
+\newblock {\em Journal of Manufacturing Systems}, 68:289--302, 2023.
+
+\bibitem{s21124113}
+Afonso Castro, Filipe Silva, and Vitor Santos.
+\newblock Trends of human-robot collaboration in industry contexts: Handover,
+  learning, and metrics.
+\newblock {\em Sensors}, 21(12), 2021.
+
+\bibitem{DBLP:journals/corr/abs-2004-11362}
+Prannay Khosla, Piotr Teterwak, Chen Wang, Aaron Sarna, Yonglong Tian, Phillip
+  Isola, Aaron Maschinot, Ce~Liu, and Dilip Krishnan.
+\newblock Supervised contrastive learning.
+\newblock {\em CoRR}, abs/2004.11362, 2020.
+
+\bibitem{RATO2022497}
+Daniela Rato, Miguel Oliveira, Vítor Santos, Manuel Gomes, and Angel Sappa.
+\newblock A sensor-to-pattern calibration framework for multi-modal industrial
+  collaborative cells.
+\newblock {\em Journal of Manufacturing Systems}, 64:497--507, 2022.
+
+\bibitem{Scalbert2021}
+Marin Scalbert, Maria Vakalopoulou, and Florent Couzini{\'{e}}{-}Devy.
+\newblock Multi-source domain adaptation via supervised contrastive learning
+  and confident consistency regularization.
+\newblock {\em CoRR}, abs/2106.16093, 2021.
 
 \end{thebibliography}

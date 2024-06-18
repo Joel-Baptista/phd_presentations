@@ -1,0 +1,109 @@
+%% cell.tikz, by __vsantos, Feb 2023
+\tikzset
+{
+    pics/camera/.style=
+    {
+    code={
+        	\draw [thick] (-10pt,-5pt) rectangle ++(20pt,10pt);
+        	\draw (-10pt,-2.5pt) rectangle ++(-5pt,5pt);
+        	\coordinate (-lenstop) at (-15pt,2.5pt);
+			\coordinate (-lensbottom) at (-15pt,-2.5pt);
+			\coordinate (-lenscenter) at (-15pt,0pt);			
+        },
+    },
+	dimArr/.style={{Latex[length=3mm, width=1.5mm]}-{Latex[length=3mm, width=1.5mm]}},
+%	dimArr/.style={{Latex[scale=2]}-{Latex[scale=2]}},  
+	frameTxtr/.style={pattern={north east lines}},
+}
+%person.tikz
+%after https://tex.stackexchange.com/questions/593552/drawing-a-person-in-latex
+\tikzset
+{
+    pics/man/.style=
+    {
+    code={
+     \draw[#1]   
+                (0,0) .. controls ++(0,-0.8) and ++(0.2,0.6) ..
+                (-0.4,-1.8) .. controls ++(0.2,-0.8) and ++(0.1,0.6) ..
+                (-0.5,-4.4) .. controls ++(-0.6,-0.2) and ++(0.7,0.1) ..
+                (-2,-4.8) coordinate (-leftFoot) .. controls ++(0,0.3) and ++(-0.5,-0.2)  ..
+                (-1,-3.8) .. controls ++(-0.1,0.9) and ++(-0.1,-0.8)  ..
+                (-1,-1.8) .. controls ++(-0.3,1) and ++(-0.2,-0.8)  ..              
+                (-0.9,0.9) .. controls ++(-0.1,1) and ++(0,-0.8)   ..
+                (-1.2,2.8)  .. controls ++(-0.4,-1) and ++(0.4,0.5)  ..
+                (-2.6,0.8) .. controls ++(0.5,-0.8) and ++(0.2,-0.1)  ..
+                (-3.2,-0.1) .. controls ++(-0.2,0) and ++(-0.3,-0.5)  ..
+                (-3.3,0.8) .. controls ++(0.4,0.5) and ++(-0.5,-0.5)  ..        
+                (-1.8,3.4) .. controls ++(0.5,0.5) and ++(-0.3,-0.1)  ..                
+                (-0.7,3.9) .. controls ++(0.3,0.1) and ++(0,-0.2)  ..
+                (-0.4,4.3) .. controls ++(-1.2,0.3) and ++(-1.2,0)  ..
+                %
+                (0,6.2) coordinate (-head) .. controls ++(1.2,0) and ++(1.2,0.3) .. % Top of the head
+                %
+                (0.4,4.3) .. controls ++(0,-0.2) and ++(-0.3,0.1) ..
+                (0.7,3.9) .. controls ++(0.3,-0.1) and ++(-0.5,0.5) ..
+                (1.8,3.4)coordinate (-rightarm)  .. controls ++(0.5,-0.5) and ++(-0.4,0.5) ..
+                (3.3,0.8) .. controls ++(0.3,-0.5) and ++(0.2,0) ..
+                (3.2,-0.1) .. controls ++(-0.2,-0.1) and ++(-0.5,-0.8) ..
+                (2.6,0.8) .. controls ++(-0.4,0.5) and ++(0.4,-1) ..
+                (1.2,2.8) .. controls ++(0,-0.8) and ++(0.1,1) ..
+                (0.9,0.9) .. controls ++(0.2,-0.8) and ++(0.3,1) ..
+                (1,-1.8) .. controls ++(0.1,-0.8) and ++(0.1,0.9) ..
+                (1,-3.8) .. controls ++(0.5,-0.2) and ++(0,0.3) ..
+                (2,-4.8) .. controls ++(-0.7,0.1) and ++(0.6,-0.2) ..
+                (0.5,-4.4) .. controls ++(-0.1,0.6) and ++(-0.2,-0.8) ..
+                (0.4,-1.8) .. controls ++(-0.2,0.6) and ++(0,-0.8) ..
+                (0,0) ++ (0,2) coordinate (-heart) -- cycle
+                ;
+        },
+    }
+}
+
+\begin{tikzpicture}[line width=0.75pt,scale=1,transform shape,font=\small]
+
+	\def\groundLen{8.5cm}
+	\def\beamLen{8cm}
+	\def\beamHeight{4cm}
+	\def\beamThickness{8pt}
+	\def\tableHeight{0.75cm}
+	
+	\coordinate (HumanLocation) at (2cm,0) ;
+	\coordinate (StartCrane) at (0.5cm, 0);
+	\coordinate (StartTable) at (5.5cm,0);
+	\coordinate (EndTable) at (6.5cm,0);
+
+	\draw (0,0) -- (\groundLen,0);
+    \draw ([yshift=1.4cm]HumanLocation) pic (Operator) {man={scale=0.3,fill=gray!30}};
+    
+
+	\draw [frameTxtr](StartCrane) rectangle ++(-\beamThickness,\beamHeight) coordinate (topL);
+	\draw [frameTxtr](topL) rectangle ++(\beamLen,\beamThickness) coordinate (topR);
+	\draw [frameTxtr]([yshift=-\beamThickness]topR) rectangle ++(-\beamThickness,-\beamHeight);	
+	
+	\draw [frameTxtr](StartTable) rectangle ++(-\beamThickness,\tableHeight) coordinate (tabltopL);
+	\draw [frameTxtr](EndTable) rectangle ++(\beamThickness,\tableHeight) coordinate (tabltopR);		
+    \draw [frameTxtr]([xshift=-\beamThickness]tabltopL) rectangle ([yshift=\beamThickness,xshift=\beamThickness]tabltopR) coordinate;
+
+
+	\coordinate (robotBase) at ([yshift=\beamThickness]$(tabltopL)!0.5!(tabltopR)$);
+	
+	\pic (L1) at (robotBase) {link bar generic={0,25pt/0/0/1/0}};
+	\pic (L2) at (L1-end) {link bar generic={-20pt,20pt/0}};
+	\pic (L3) at (L2-end) {link bar generic={-20pt,-20pt/0//0}};
+	\pic [scale=0.5] (G) at (L3-end) {gripper=2.5/0};	
+	
+	\coordinate (CamHang) at ($(topL)!0.85!([yshift=-\beamThickness]topR)$);
+	
+	\pic [scale=0.4] (Lcam) at (CamHang) {link bar generic={0,-20pt/0/0/1/0}};
+	\begin{scope}[on background layer]
+	\pic [scale=0.75,rotate=25] (Cam) at (Lcam-end) {camera};
+	\end{scope}
+
+
+	\draw [dashed] (Cam-lenstop) -- ++(179:6cm);
+	\draw [dashed] (Cam-lensbottom) -- ++(225:5cm);	
+
+	\draw [dimArr] (Cam-lenscenter) -- node [midway, above,sloped] {\SI{2}{m}}(Operator-rightarm);
+	\draw [dimArr] ([xshift={0.99*\beamLen}]StartCrane) -- node [midway, right] {\SI{2.30}{m}} ++(0,\beamHeight);
+          
+\end{tikzpicture}

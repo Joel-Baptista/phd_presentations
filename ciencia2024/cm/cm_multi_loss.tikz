@@ -1,0 +1,79 @@
+%The matrix in numbers. Adjust to your needs :-)
+\def\myConfMat{{
+{86.1, 3.6, 0.9,  9.4},  %row 1
+{ 0.5,83.8, 3.6,  12.1},  %row 2
+{ 0.1, 2.0,94.1,  3.8},  %row 3
+{ 0.3, 2.0,1.8, 95.9},  %row 4
+}}
+%
+\def\classNames{{"A","F","L","Y"}} %class names. Adapt at will
+%
+\def\numClasses{4} %number of classes. Could be automatic, but you can change it for tests.
+%
+\ifthenelse{\isundefined{\globalCMscale}}
+{
+\def\myScale{1.65} % 1.5 is a good scale. Values under 1 may need smaller fonts! _vs changed scale to 1.25 since 1.65 seems too large... and we need to save space :-)
+}
+{\def\myScale{\globalCMscale}} %use a global scale in the document if it is defined
+\begin{tikzpicture}[
+    vsblack,
+    scale = \myScale,
+    font={\small}, %for smaller scales, even \tiny may be useful
+    ]
+%
+\tikzset{vertical label/.style={rotate=90,anchor=east}}   % usable styles for below
+\tikzset{diagonal label/.style={rotate=45,anchor=north east}}
+%
+\foreach \y in {1,...,\numClasses} %loop vertical starting on top
+{
+    % Add class name on the left
+    \node [anchor=east] at (0.4,-\y) {\pgfmathparse{\classNames[\y-1]}\pgfmathresult}; 
+    
+    \foreach \x in {1,...,\numClasses}  %loop horizontal starting on left
+    {
+%---- Start of automatic calculation of totSamples for the column ------------   
+    \def\totSamples{0}
+    \foreach \ll in {1,...,\numClasses}
+    {
+        \pgfmathparse{\myConfMat[\x-1][\ll-1]}   %fetch next element
+        \xdef\totSamples{\totSamples+\pgfmathresult} %accumulate it with previous sum
+        %must use \xdef fro global effect otherwise lost in foreach loop!
+    }
+    \pgfmathparse{\totSamples} \xdef\totSamples{\pgfmathresult}  % put the final sum in variable
+%---- End of automatic calculation of totSamples ----------------
+    
+    \begin{scope}[shift={(\x,-\y)}]
+        \def\mVal{\myConfMat[\y-1][\x-1]} % The value at index y,x (-1 because of zero indexing)
+%        \pgfmathtruncatemacro{\r}{\mVal}   %
+        \pgfmathsetmacro{\r}{\mVal} % the absolute value
+        \pgfmathsetmacro{\p}{\r/\totSamples*100}  %the percentual value
+        \pgfmathtruncatemacro{\pr}{round(\r/\totSamples*100)}  % A rounded percentage to units for aux calc
+        \coordinate (C) at (0,0);
+        \ifthenelse{\pr<50}{\def\txtcol{black}}{\def\txtcol{white}} %decide text color for contrast
+        \node[
+            draw,                 %draw lines
+            text={\txtcol},         %text color (automatic for better contrast)
+            align=center,         %align text inside cells (also for wrapping)
+            fill=cfcolor!\pr,        %intensity of fill (can change base color)
+            minimum size=\myScale*10mm,    %cell size to fit the scale and integer dimensions (in cm)
+            inner sep=0,          %remove all inner gaps to save space in small scales
+            ] (C) {
+            %Next lines can used/adapted for dual representations of data (total and calculated percentage...)
+            \pgfkeys{/pgf/number format/.cd,fixed,fixed zerofill,precision=2}
+            \r%\%
+%			\\\pgfmathprintnumber{\p}\%
+%%            \p\%
+            };     %text to put in cell (adapt at will)
+        %Now if last vertical class add its label at the bottom
+        \ifthenelse{\y=\numClasses}{
+        \node [] at ($(C)-(0,0.75)$) % can use vertical or diagonal label as option
+        {\pgfmathparse{\classNames[\x-1]}\pgfmathresult};}{}
+    \end{scope}
+    }
+}
+%Now add x and y labels on suitable coordinates
+\coordinate (yaxis) at (-0.3,0.5-\numClasses/2);  %must adapt if class labels are wider!
+\coordinate (xaxis) at (0.5+\numClasses/2, -\numClasses-1.25); %id. for non horizontal labels!
+%\node [vertical label,yshift=0pt] at (yaxis) {True Label}; %0 pt instead of 16pt _vs
+\node []               at (xaxis) {Predicted Label};
+\end{tikzpicture}
