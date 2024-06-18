@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  18 JUN 2024 11:24
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  18 JUN 2024 12:21
  restricted system commands enabled.
 **poster.tex
 (./poster.tex
@@ -1282,34 +1282,45 @@ Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
 \sepwidth=\skip85
 \colwidth=\skip86
+<img/Ciencia_2024_Horizontal_Branco.png, id=10, 226.9278pt x 198.9834pt>
+File: img/Ciencia_2024_Horizontal_Branco.png Graphic file (type png)
+<use img/Ciencia_2024_Horizontal_Branco.png>
+Package luatex.def Info: img/Ciencia_2024_Horizontal_Branco.png  used on input 
+line 61.
+(luatex.def)             Requested size: 349.48026pt x 284.52756pt.
+<img/ieeta.png, id=12, 605.26125pt x 269.50688pt>
+File: img/ieeta.png Graphic file (type png)
+<use img/ieeta.png>
+Package luatex.def Info: img/ieeta.png  used on input line 63.
+(luatex.def)             Requested size: 277.71884pt x 256.0748pt.
 (./build/poster.aux)
 \openout1 = ./build/poster.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-7.
+9.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1367,7 +1378,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 69.
 
 (./build/poster.out) (./build/poster.out)
 \@outlinefile=\write5
@@ -1402,29 +1413,55 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.14).
 
 (./build/poster.nav)
+
+Package hyperref Warning: Suppressing empty link on input line 69.
+
+File: img/ieeta.png Graphic file (type png)
+<use img/ieeta.png>
+Package luatex.def Info: img/ieeta.png  used on input line 69.
+(luatex.def)             Requested size: 277.71884pt x 256.0748pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-7.
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+9.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-7.
+9.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-67.
+69.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 67.
-LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 67.
- (./build/poster.bbl) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              <6> on input line 69.
+LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 69.
+File: img/Ciencia_2024_Horizontal_Branco.png Graphic file (type png)
+<use img/Ciencia_2024_Horizontal_Branco.png>
+Package luatex.def Info: img/Ciencia_2024_Horizontal_Branco.png  used on input 
+line 69.
+(luatex.def)             Requested size: 349.48026pt x 284.52756pt.
+ (./build/poster.bbl)
+File: img/ieeta.png Graphic file (type png)
+<use img/ieeta.png>
+Package luatex.def Info: img/ieeta.png  used on input line 313.
+(luatex.def)             Requested size: 277.71884pt x 256.0748pt.
+File: img/Ciencia_2024_Horizontal_Branco.png Graphic file (type png)
+<use img/Ciencia_2024_Horizontal_Branco.png>
+Package luatex.def Info: img/Ciencia_2024_Horizontal_Branco.png  used on input 
+line 313.
+(luatex.def)             Requested size: 349.48026pt x 284.52756pt.
 
-]
+
+Package hyperref Warning: Suppressing empty link on input line 313.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+<./img/ieeta.png><./img/Ciencia_2024_Horizontal_Branco.png>]
 \tf@nav=\write6
 
 \openout6 = ./build/poster.nav
@@ -1435,25 +1472,23 @@ LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 67.
 
 \openout8 = ./build/poster.snm
  (./build/poster.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `./build/poster.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40922 strings out of 478382
- 381542,1977958 words of node,token memory allocated
- 86586 words of node memory still in use:
-   527 hlist, 48 vlist, 61 rule, 563 disc, 91 local_par, 36 math, 2147 glue, 877
- kern, 262 penalty, 6286 glyph, 1556 attribute, 83 glue_spec, 1556 attribute_lis
-t, 4 write, 496 pdf_literal, 1 pdf_dest, 364 pdf_colorstack nodes
-   avail lists: 2:446,3:2308,4:1263,5:2779,6:284,7:26038,8:20,9:2058,10:18,11:17
-17
- 59241 multiletter control sequences out of 65536+600000
+ 40970 strings out of 478382
+ 381529,1977958 words of node,token memory allocated
+ 88772 words of node memory still in use:
+   555 hlist, 48 vlist, 71 rule, 584 disc, 94 local_par, 38 math, 2197 glue, 899
+ kern, 272 penalty, 6421 glyph, 1588 attribute, 83 glue_spec, 1588 attribute_lis
+t, 4 write, 496 pdf_literal, 1 pdf_dest, 364 pdf_colorstack, 2 pdf_setmatrix, 2 
+pdf_save, 2 pdf_restore nodes
+   avail lists: 1:2,2:505,3:2352,4:1263,5:2782,6:292,7:26413,8:16,9:2147,10:18,1
+1:1769
+ 59253 multiletter control sequences out of 65536+600000
  123 fonts using 19387399 bytes
- 128i,20n,115p,726b,2807s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,21n,115p,726b,2807s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fo
 nts/truetype/typoland/lato/Lato-Bold.ttf>{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texli
@@ -1467,10 +1502,10 @@ pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on ./build/poster.pdf (1 page, 144092 bytes).
+Output written on ./build/poster.pdf (1 page, 181064 bytes).
 
-PDF statistics: 98 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+PDF statistics: 108 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 100000000)
 
