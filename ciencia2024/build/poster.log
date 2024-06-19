@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  19 JUN 2024 12:29
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  19 JUN 2024 15:29
  restricted system commands enabled.
 **poster.tex
 (./poster.tex
@@ -1980,15 +1980,39 @@ Overfull \hbox (1.30885pt too wide) in paragraph at lines 379--379
  []
 
 
-Underfull \hbox (badness 3579) in paragraph at lines 379--379
-[]\TU/Lato(1)/m/n/13.82 Khosla, P., Teter-wak, P., Wang, C., Sarna, A., Tian, Y.
-, Isola, P., Maschinot, A., Liu, C.
+Underfull \hbox (badness 5260) in paragraph at lines 379--379
+[]\TU/Lato(1)/m/n/16.59 Rato, D., Oliveira, M., San-tos, V., Gomes, M. and Sappa
+, A. (2022) ’A
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 379--379
-\TU/Lato(1)/m/n/13.82 and Kr-ish-nan, D. (2020) ’Su-per-vised Con-trastive Lea
-rn-ing’, CoRR, 2004.11362. Avail-able at:
+Underfull \hbox (badness 6063) in paragraph at lines 379--379
+\TU/Lato(1)/m/n/16.59 sensor-to-pattern cal-i-bra-tion frame-work for multi-moda
+l in-dus-trial col-lab-o-ra-
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 379--379
+\TU/Lato(1)/m/n/16.59 tive cells’, Jour-nal of Man-u-fac-tur-ing Sys-tems, 64,
+ pp. 497-507. doi:
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 379--379
+[]\TU/Lato(1)/m/n/16.59 Cas-tro, A., Bap-tista, J., Silva, F. and San-tos, V. (2
+023) ’Clas-si-fi-ca-tion of han-
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 379--379
+\TU/Lato(1)/m/n/16.59 dover in-ter-ac-tion prim-i-tives in a COBOT–hu-man con-
+text with a deep neu-
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 379--379
+\TU/Lato(1)/m/n/16.59 ral net-work’, Jour-nal of Man-u-fac-tur-ing Sys-tems, 
+68, pp. 289-302. doi:
  []
 
 File: img/ieeta.png Graphic file (type png)
@@ -2030,14 +2054,14 @@ Package rerunfilecheck Info: File `./build/poster.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  48052 strings out of 478382
- 596195,1977958 words of node,token memory allocated
- 130425 words of node memory still in use:
-   1163 hlist, 53 vlist, 95 rule, 709 disc, 87 local_par, 48 math, 3871 glue, 12
-83 kern, 285 penalty, 8068 glyph, 3442 attribute, 86 glue_spec, 3442 attribute_l
+ 596178,1977958 words of node,token memory allocated
+ 130498 words of node memory still in use:
+   1166 hlist, 53 vlist, 95 rule, 709 disc, 87 local_par, 48 math, 3877 glue, 12
+82 kern, 288 penalty, 8068 glyph, 3442 attribute, 86 glue_spec, 3442 attribute_l
 ist, 18 write, 983 pdf_literal, 7 pdf_dest, 408 pdf_colorstack, 19 pdf_setmatrix
 , 19 pdf_save, 19 pdf_restore nodes
-   avail lists: 2:509,3:4003,4:1347,5:3925,6:272,7:36400,8:58,9:3986,10:17,11:21
-35
+   avail lists: 1:2,2:509,3:4012,4:1347,5:3922,6:272,7:36418,8:58,9:3995,10:17,1
+1:2135
  65785 multiletter control sequences out of 65536+600000
  116 fonts using 18769087 bytes
  128i,21n,117p,726b,1876s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2051,7 +2075,7 @@ exmf-dist/fonts/opentype/impallari/raleway/Raleway-Bold.otf></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ./build/poster.pdf (1 page, 573277 bytes).
+Output written on ./build/poster.pdf (1 page, 573327 bytes).
 
 PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream

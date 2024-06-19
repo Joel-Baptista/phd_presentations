@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1718796561 "poster.tex" "./build/poster.pdf" "./build/poster" 1718796563 2
-  "./build/poster.aux" 1718796563 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
+["pdflatex"] 1718807341 "poster.tex" "./build/poster.pdf" "./build/poster" 1718807343 2
+  "./build/poster.aux" 1718807343 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-bold.luc" 1718705504 1514695 3dda31e5d33fa41e693eb23fb01f7b95 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-bolditalic.luc" 1718705503 1593031 5f8c179b03132629ddb201f08dfb6595 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-italic.luc" 1718705505 1586623 82968cd68c88b75d422aa2241e3ccdc2 ""
@@ -417,9 +417,9 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1712590646 11859521 0bbefe64207409a50dea79307e154465 ""
   "beamercolorthemegemini.sty" 1718705618 1786 cdc57c45f5021ebe90e71d3a4bece540 ""
   "beamerthemegemini.sty" 1718705618 6725 e91abe9c3aa7634ca98ec841af52bce9 ""
-  "build/poster.aux" 1718796563 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
-  "build/poster.nav" 1718796563 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
-  "build/poster.out" 1718796562 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "build/poster.aux" 1718807343 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
+  "build/poster.nav" 1718807343 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
+  "build/poster.out" 1718807342 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "cm/cm_multi_loss.tikz" 1718735075 3791 5caf6cbd5d1ba7dd739a4d2cc05b6bf8 ""
   "cm/cm_normal.tikz" 1718735019 3788 8d0a5e871ea0766d3363c89a19f579cb ""
   "gestures/A1.png" 1718723646 22669 0669f872c58a827964e2bc2d2531f25c ""
@@ -441,7 +441,7 @@
   "img/Ciencia_2024_Horizontal_Branco.png" 1716311626 49399 c0c0c088318a32ce34d43b46561d5538 ""
   "img/architecture.png" 1718733228 106401 5a1abde397a331c3e6a2a27fff6c23f3 ""
   "img/ieeta.png" 1718709248 10477 cb193248c5c6247302c8b2c7c44942db ""
-  "poster.tex" 1718796559 16044 21ac5bb854b24ccfc9b54d92f3c6313a ""
+  "poster.tex" 1718807316 16046 ca1113807ee96e7690a94610a41b9163 ""
   (generated)
   "./build/poster.aux"
   "./build/poster.log"
