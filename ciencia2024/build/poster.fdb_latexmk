@@ -1,14 +1,6 @@
 # Fdb version 4
-["bibtex build/poster"] 1718738937 "build/poster.aux" "build/poster.bbl" "build/poster" 1718740039 0
-  "./poster.bib" 1718738921 6913 09add8b4ca01ecdaf148fc06d34e156a ""
-  "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "build/poster.aux" 1718740039 2299 db4a11896b16809f5f4385ab1cf0f945 "pdflatex"
-  (generated)
-  "build/poster.bbl"
-  "build/poster.blg"
-  (rewritten before read)
-["pdflatex"] 1718740036 "poster.tex" "./build/poster.pdf" "./build/poster" 1718740039 2
-  "./build/poster.aux" 1718740039 2299 db4a11896b16809f5f4385ab1cf0f945 "pdflatex"
+["pdflatex"] 1718796561 "poster.tex" "./build/poster.pdf" "./build/poster" 1718796563 2
+  "./build/poster.aux" 1718796563 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-bold.luc" 1718705504 1514695 3dda31e5d33fa41e693eb23fb01f7b95 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-bolditalic.luc" 1718705503 1593031 5f8c179b03132629ddb201f08dfb6595 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lato-italic.luc" 1718705505 1586623 82968cd68c88b75d422aa2241e3ccdc2 ""
@@ -23,7 +15,7 @@
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/raleway-bold.luc" 1718705501 251356 1058067f5a3f503118f27b0c93a66c05 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/raleway-regular-italic.luc" 1718705501 220907 dda4f1de653c980d14c7ec2608164422 ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/raleway-regular.luc" 1718705501 250419 c73a4ffc7fb8072740d9f06df1ddc058 ""
-  "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1718737925 27983 40c54660bc72fee2e549eaa9ac280ce1 ""
+  "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1718796542 28069 19be563fc6130b3528ee7b0dc678cb0b ""
   "/home/joel/.texlive2022/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1712590971 625967 9e4e2bd03f92484fd02893aa4b770225 ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/impallari/raleway/Raleway-Bold.otf" 1407086865 104164 14b7c1bcf2c29994177a6cf635f33935 ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/impallari/raleway/Raleway-Regular.otf" 1407086865 101096 ef75bfbbdcde76cb5dd15d6144d090b6 ""
@@ -38,7 +30,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-Bold.ttf" 1393472548 683116 01dcf602cb7f7116bde159f25c4bbe89 ""
   "/usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-Light.ttf" 1393472548 632536 61c831bc09638478b8c58040cd9cddc0 ""
-  "/usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-LightItalic.ttf" 1393472548 647880 9d90bf6595d8e95aee5e2ac2265e833c ""
   "/usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-Regular.ttf" 1393472548 661592 fa62c04b03d3f7d2333a33c311d9747d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -426,10 +417,9 @@
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1712590646 11859521 0bbefe64207409a50dea79307e154465 ""
   "beamercolorthemegemini.sty" 1718705618 1786 cdc57c45f5021ebe90e71d3a4bece540 ""
   "beamerthemegemini.sty" 1718705618 6725 e91abe9c3aa7634ca98ec841af52bce9 ""
-  "build/poster.aux" 1718740039 2299 db4a11896b16809f5f4385ab1cf0f945 "pdflatex"
-  "build/poster.bbl" 1718738937 1326 26750d2abded09d5e7ac11aa7c09972c "bibtex build/poster"
-  "build/poster.nav" 1718740039 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
-  "build/poster.out" 1718740038 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "build/poster.aux" 1718796563 1790 554eccbd5f157a46e2edc49965d06ea6 "pdflatex"
+  "build/poster.nav" 1718796563 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
+  "build/poster.out" 1718796562 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "cm/cm_multi_loss.tikz" 1718735075 3791 5caf6cbd5d1ba7dd739a4d2cc05b6bf8 ""
   "cm/cm_normal.tikz" 1718735019 3788 8d0a5e871ea0766d3363c89a19f579cb ""
   "gestures/A1.png" 1718723646 22669 0669f872c58a827964e2bc2d2531f25c ""
@@ -451,7 +441,7 @@
   "img/Ciencia_2024_Horizontal_Branco.png" 1716311626 49399 c0c0c088318a32ce34d43b46561d5538 ""
   "img/architecture.png" 1718733228 106401 5a1abde397a331c3e6a2a27fff6c23f3 ""
   "img/ieeta.png" 1718709248 10477 cb193248c5c6247302c8b2c7c44942db ""
-  "poster.tex" 1718740035 15221 f6a7e0cc4e6b9f1456165e5684c8effc ""
+  "poster.tex" 1718796559 16044 21ac5bb854b24ccfc9b54d92f3c6313a ""
   (generated)
   "./build/poster.aux"
   "./build/poster.log"

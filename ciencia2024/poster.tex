@@ -129,10 +129,10 @@ Training for Hand Gesture Recognition}
     human-machine interaction, medical rehabilitation, and virtual reality. HGR systems also 
     target robotic applications using a variety of input devices, among which stands out color
     cameras, depth sensors or gloves with embedded sensors. In this context, the ability of 
-    robots to recognize hand gestures and other forms of intuitive human interactions \cite{afonso2023} 
+    robots to recognize hand gestures
     seems very promising for progress in Human-Robot Collaboration (HRC), 
     as these gestures are simple and intuitive for a human partner to produce. This, in turn, allows 
-    humans and robots to coexist and cooperate, improving task efficiency and safety. \cite{s21124113}.
+    humans and robots to coexist and cooperate, improving task efficiency and safety.
 
 
     However, HGR is an inherently challenging task due to the complex, non-rigid properties of the hand, 
@@ -150,7 +150,7 @@ Training for Hand Gesture Recognition}
 
   \begin{block}{Objectives}
 
-    The main goal is to shed light on the impact of supervised contrastive learning (SCL) \cite{DBLP:journals/corr/abs-2004-11362}
+    The main goal is to shed light on the impact of supervised contrastive learning (SCL) 
     on the generalization ability of a trained deep model in gesture classification when faced with a distribution shift.
     For this purpose, the study:
 
@@ -242,7 +242,7 @@ Training for Hand Gesture Recognition}
     % \noindent{\footnotesize{\textsuperscript{1} Tables may have a footer.}}
   \end{table}
 
-  Both of the datasets were recorded in the collaborative cell \cite{RATO2022497} located in 
+  Both of the datasets were recorded in the collaborative cell located in 
   the Laboratory of Automation and Robotics at the University of Aveiro.
 
   \begin{block}{Methodology}
@@ -255,7 +255,7 @@ Training for Hand Gesture Recognition}
     for the specific hand gesture classification task involving four classes.
 
     SCL has been shown to be effective for domain adaptation, 
-    because it can help the model to learn features that are invariant to domain shifts \cite{Scalbert2021}.
+    because it can help the model to learn features that are invariant to domain shifts.
     
     The idea behind the proposed contrastive domain adaptation technique is to use a network that 
     branches twice after the encoder model (dual-branch head), allowing to train the representation 
@@ -357,8 +357,17 @@ Training for Hand Gesture Recognition}
   \begin{block}{References}
 
     % \nocite{*}
-    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    % \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
     % \input{bib}
+    \scriptsize
+
+    Rato, D., Oliveira, M., Santos, V., Gomes, M. and Sappa, A. (2022) 'A sensor-to-pattern calibration framework for multi-modal industrial collaborative cells', Journal of Manufacturing Systems, 64, pp. 497-507. doi: https://doi.org/10.1016/j.jmsy.2022.07.006.
+
+    Castro, A., Silva, F. and Santos, V. (2021) 'Trends of Human-Robot Collaboration in Industry Contexts: Handover, Learning, and Metrics', Sensors, 21(12), 4113. doi: 10.3390/s21124113.
+
+    Castro, A., Baptista, J., Silva, F. and Santos, V. (2023) 'Classification of handover interaction primitives in a COBOT–human context with a deep neural network', Journal of Manufacturing Systems, 68, pp. 289-302. doi: https://doi.org/10.1016/j.jmsy.2023.03.010.
+
+    Khosla, P., Teterwak, P., Wang, C., Sarna, A., Tian, Y., Isola, P., Maschinot, A., Liu, C. and Krishnan, D. (2020) 'Supervised Contrastive Learning', CoRR, 2004.11362. Available at: https://arxiv.org/abs/2004.11362 (Accessed: 19 June 2024).
 
 
   \end{block}

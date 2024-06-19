@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  18 JUN 2024 20:47
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2024.4.8)  19 JUN 2024 12:29
  restricted system commands enabled.
 **poster.tex
 (./poster.tex
@@ -1689,7 +1689,7 @@ line 112.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1698,7 +1698,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1707,7 +1707,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1716,7 +1716,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1725,7 +1725,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1734,7 +1734,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \iterate.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1743,7 +1743,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \beamer@doifinframe.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1752,7 +1752,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \beamer@doifinframe.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1761,108 +1761,108 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \beamer@doifinframe.
 <to be read again> 
 1
-l.370 \end{frame}
+l.379 \end{frame}
                
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 370--370
+Underfull \hbox (badness 1107) in paragraph at lines 379--379
 []\TU/Lato(1)/m/n/23.88 The ma-jor ap-pli-ca-tion ar-eas of ges-ture recog-ni-ti
 on in-
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 370--370
+Underfull \hbox (badness 1460) in paragraph at lines 379--379
 []\TU/Lato(1)/m/n/23.88 To test the de-gree of gen-er-al-iza-tion of the pro-pos
 ed
  []
 
-<gestures/A1.png, id=48, 100.375pt x 100.375pt>
+<gestures/A1.png, id=45, 100.375pt x 100.375pt>
 File: gestures/A1.png Graphic file (type png)
 <use gestures/A1.png>
-Package luatex.def Info: gestures/A1.png  used on input line 370.
+Package luatex.def Info: gestures/A1.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/F1.png, id=49, 100.375pt x 100.375pt>
+<gestures/F1.png, id=46, 100.375pt x 100.375pt>
 File: gestures/F1.png Graphic file (type png)
 <use gestures/F1.png>
-Package luatex.def Info: gestures/F1.png  used on input line 370.
+Package luatex.def Info: gestures/F1.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/L1.png, id=50, 100.375pt x 100.375pt>
+<gestures/L1.png, id=47, 100.375pt x 100.375pt>
 File: gestures/L1.png Graphic file (type png)
 <use gestures/L1.png>
-Package luatex.def Info: gestures/L1.png  used on input line 370.
+Package luatex.def Info: gestures/L1.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/Y1.png, id=51, 100.375pt x 100.375pt>
+<gestures/Y1.png, id=48, 100.375pt x 100.375pt>
 File: gestures/Y1.png Graphic file (type png)
 <use gestures/Y1.png>
-Package luatex.def Info: gestures/Y1.png  used on input line 370.
+Package luatex.def Info: gestures/Y1.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/A2.png, id=52, 100.375pt x 100.375pt>
+<gestures/A2.png, id=49, 100.375pt x 100.375pt>
 File: gestures/A2.png Graphic file (type png)
 <use gestures/A2.png>
-Package luatex.def Info: gestures/A2.png  used on input line 370.
+Package luatex.def Info: gestures/A2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/F2.png, id=53, 100.375pt x 100.375pt>
+<gestures/F2.png, id=50, 100.375pt x 100.375pt>
 File: gestures/F2.png Graphic file (type png)
 <use gestures/F2.png>
-Package luatex.def Info: gestures/F2.png  used on input line 370.
+Package luatex.def Info: gestures/F2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/L2.png, id=54, 100.375pt x 100.375pt>
+<gestures/L2.png, id=51, 100.375pt x 100.375pt>
 File: gestures/L2.png Graphic file (type png)
 <use gestures/L2.png>
-Package luatex.def Info: gestures/L2.png  used on input line 370.
+Package luatex.def Info: gestures/L2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/Y2.png, id=55, 100.375pt x 100.375pt>
+<gestures/Y2.png, id=52, 100.375pt x 100.375pt>
 File: gestures/Y2.png Graphic file (type png)
 <use gestures/Y2.png>
-Package luatex.def Info: gestures/Y2.png  used on input line 370.
+Package luatex.def Info: gestures/Y2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_A2.png, id=56, 100.375pt x 100.375pt>
+<gestures/MU_A2.png, id=53, 100.375pt x 100.375pt>
 File: gestures/MU_A2.png Graphic file (type png)
 <use gestures/MU_A2.png>
-Package luatex.def Info: gestures/MU_A2.png  used on input line 370.
+Package luatex.def Info: gestures/MU_A2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_F2.png, id=57, 100.375pt x 100.375pt>
+<gestures/MU_F2.png, id=54, 100.375pt x 100.375pt>
 File: gestures/MU_F2.png Graphic file (type png)
 <use gestures/MU_F2.png>
-Package luatex.def Info: gestures/MU_F2.png  used on input line 370.
+Package luatex.def Info: gestures/MU_F2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_L2.png, id=58, 100.375pt x 100.375pt>
+<gestures/MU_L2.png, id=55, 100.375pt x 100.375pt>
 File: gestures/MU_L2.png Graphic file (type png)
 <use gestures/MU_L2.png>
-Package luatex.def Info: gestures/MU_L2.png  used on input line 370.
+Package luatex.def Info: gestures/MU_L2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_Y2.png, id=59, 100.375pt x 100.375pt>
+<gestures/MU_Y2.png, id=56, 100.375pt x 100.375pt>
 File: gestures/MU_Y2.png Graphic file (type png)
 <use gestures/MU_Y2.png>
-Package luatex.def Info: gestures/MU_Y2.png  used on input line 370.
+Package luatex.def Info: gestures/MU_Y2.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_A3.png, id=60, 100.375pt x 100.375pt>
+<gestures/MU_A3.png, id=57, 100.375pt x 100.375pt>
 File: gestures/MU_A3.png Graphic file (type png)
 <use gestures/MU_A3.png>
-Package luatex.def Info: gestures/MU_A3.png  used on input line 370.
+Package luatex.def Info: gestures/MU_A3.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_F3.png, id=61, 100.375pt x 100.375pt>
+<gestures/MU_F3.png, id=58, 100.375pt x 100.375pt>
 File: gestures/MU_F3.png Graphic file (type png)
 <use gestures/MU_F3.png>
-Package luatex.def Info: gestures/MU_F3.png  used on input line 370.
+Package luatex.def Info: gestures/MU_F3.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_L3.png, id=62, 100.375pt x 100.375pt>
+<gestures/MU_L3.png, id=59, 100.375pt x 100.375pt>
 File: gestures/MU_L3.png Graphic file (type png)
 <use gestures/MU_L3.png>
-Package luatex.def Info: gestures/MU_L3.png  used on input line 370.
+Package luatex.def Info: gestures/MU_L3.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
-<gestures/MU_Y3.png, id=63, 100.375pt x 100.375pt>
+<gestures/MU_Y3.png, id=60, 100.375pt x 100.375pt>
 File: gestures/MU_Y3.png Graphic file (type png)
 <use gestures/MU_Y3.png>
-Package luatex.def Info: gestures/MU_Y3.png  used on input line 370.
+Package luatex.def Info: gestures/MU_Y3.png  used on input line 379.
 (luatex.def)             Requested size: 119.50096pt x 119.50897pt.
 ! Undefined control sequence.
 \beamer@doifinframe ...le Training dataset & \num 
                                                   {6430} & \num {6148} & \nu...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1873,7 +1873,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...taset & \num {6430} & \num 
                                                   {6148} & \num {5989} & \nu...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1884,7 +1884,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...6430} & \num {6148} & \num 
                                                   {5989} & \num {6044} & \te...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1895,7 +1895,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...6148} & \num {5989} & \num 
                                                   {6044} & \textbf {\num {24...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1906,7 +1906,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \num 
      
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1917,7 +1917,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...i-user test dataset & \num 
                                                   {4183} & \num {4277} & \nu...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1928,7 +1928,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...taset & \num {4183} & \num 
                                                   {4277} & \num {4276} & \nu...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1939,7 +1939,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...4183} & \num {4277} & \num 
                                                   {4276} & \num {4316} & \te...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1950,7 +1950,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \beamer@doifinframe ...4277} & \num {4276} & \num 
                                                   {4316} & \textbf {\num {17...
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1961,7 +1961,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \num 
      
-l.370 \end{frame}
+l.379 \end{frame}
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1969,28 +1969,36 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<img/architecture.png, id=66, 1018.55531pt x 646.66594pt>
+<img/architecture.png, id=61, 1018.55531pt x 646.66594pt>
 File: img/architecture.png Graphic file (type png)
 <use img/architecture.png>
-Package luatex.def Info: img/architecture.png  used on input line 370.
+Package luatex.def Info: img/architecture.png  used on input line 379.
 (luatex.def)             Requested size: 597.51395pt x 379.36865pt.
 (./cm/cm_normal.tikz) (./cm/cm_multi_loss.tikz)
-Overfull \hbox (1.30885pt too wide) in paragraph at lines 370--370
+Overfull \hbox (1.30885pt too wide) in paragraph at lines 379--379
  [] 
  []
 
-(./build/poster.bbl)
-Overfull \vbox (6.46796pt too high) detected at line 370
+
+Underfull \hbox (badness 3579) in paragraph at lines 379--379
+[]\TU/Lato(1)/m/n/13.82 Khosla, P., Teter-wak, P., Wang, C., Sarna, A., Tian, Y.
+, Isola, P., Maschinot, A., Liu, C.
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 379--379
+\TU/Lato(1)/m/n/13.82 and Kr-ish-nan, D. (2020) ’Su-per-vised Con-trastive Lea
+rn-ing’, CoRR, 2004.11362. Avail-able at:
  []
 
 File: img/ieeta.png Graphic file (type png)
 <use img/ieeta.png>
-Package luatex.def Info: img/ieeta.png  used on input line 370.
+Package luatex.def Info: img/ieeta.png  used on input line 379.
 (luatex.def)             Requested size: 250.68367pt x 256.0748pt.
 File: img/Ciencia_2024_Horizontal_Branco.png Graphic file (type png)
 <use img/Ciencia_2024_Horizontal_Branco.png>
 Package luatex.def Info: img/Ciencia_2024_Horizontal_Branco.png  used on input 
-line 370.
+line 379.
 (luatex.def)             Requested size: 349.48026pt x 284.52756pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -2021,34 +2029,32 @@ Package rerunfilecheck Info: File `./build/poster.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 48116 strings out of 478382
- 596144,1977958 words of node,token memory allocated
- 133268 words of node memory still in use:
-   1183 hlist, 53 vlist, 95 rule, 740 disc, 88 local_par, 48 math, 3925 glue, 13
-04 kern, 304 penalty, 8217 glyph, 3544 attribute, 86 glue_spec, 3544 attribute_l
-ist, 18 write, 983 pdf_literal, 5 pdf_start_link, 5 pdf_end_link, 12 pdf_dest, 5
- pdf_action, 458 pdf_colorstack, 19 pdf_setmatrix, 19 pdf_save, 19 pdf_restore n
-odes
-   avail lists: 1:1,2:509,3:4075,4:1497,5:3988,6:275,7:37009,8:68,9:4046,10:17,1
-1:2228
- 65835 multiletter control sequences out of 65536+600000
- 117 fonts using 19254855 bytes
+ 48052 strings out of 478382
+ 596195,1977958 words of node,token memory allocated
+ 130425 words of node memory still in use:
+   1163 hlist, 53 vlist, 95 rule, 709 disc, 87 local_par, 48 math, 3871 glue, 12
+83 kern, 285 penalty, 8068 glyph, 3442 attribute, 86 glue_spec, 3442 attribute_l
+ist, 18 write, 983 pdf_literal, 7 pdf_dest, 408 pdf_colorstack, 19 pdf_setmatrix
+, 19 pdf_save, 19 pdf_restore nodes
+   avail lists: 2:509,3:4003,4:1347,5:3925,6:272,7:36400,8:58,9:3986,10:17,11:21
+35
+ 65785 multiletter control sequences out of 65536+600000
+ 116 fonts using 18769087 bytes
  128i,21n,117p,726b,1876s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-LightItalic.ttf
-></usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-Bold.ttf>{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/
-lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texl
-ive/texmf-dist/fonts/truetype/typoland/lato/Lato-Regular.ttf></usr/share/texlive
-/texmf-dist/fonts/truetype/typoland/lato/Lato-Light.ttf></usr/share/texlive/texm
-f-dist/fonts/opentype/impallari/raleway/Raleway-Regular.otf></usr/share/texlive/
-texmf-dist/fonts/opentype/impallari/raleway/Raleway-Bold.otf></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ./build/poster.pdf (1 page, 587073 bytes).
+</usr/share/texlive/texmf-dist/fonts/truetype/typoland/lato/Lato-Bold.ttf>{/usr/
+share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texli
+ve/texmf-dist/fonts/truetype/typoland/lato/Lato-Regular.ttf></usr/share/texlive/
+texmf-dist/fonts/truetype/typoland/lato/Lato-Light.ttf></usr/share/texlive/texmf
+-dist/fonts/opentype/impallari/raleway/Raleway-Regular.otf></usr/share/texlive/t
+exmf-dist/fonts/opentype/impallari/raleway/Raleway-Bold.otf></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on ./build/poster.pdf (1 page, 573277 bytes).
 
-PDF statistics: 158 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 131072)
+PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 131072)
  236 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -902,8 +902,6 @@ INPUT ./cm/cm_normal.tikz
 INPUT ./cm/cm_normal.tikz
 INPUT ./cm/cm_multi_loss.tikz
 INPUT ./cm/cm_multi_loss.tikz
-INPUT ./build/poster.bbl
-INPUT ./build/poster.bbl
 INPUT ./img/ieeta.png
 INPUT ./img/ieeta.png
 INPUT ./img/Ciencia_2024_Horizontal_Branco.png
