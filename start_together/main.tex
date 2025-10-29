@@ -1,0 +1,163 @@
+\documentclass[10pt,xcolor={dvipsnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usetheme{Copenhagen}
+\usecolortheme{seagull}
+
+\usepackage{caption}
+\usepackage{media9}
+% \usepackage{media9}%
+\newcommand{\includemovie}[3]{%
+\includemedia[%
+width=#1,height=#2,%
+activate=pagevisible,%
+deactivate=pageclose,%
+addresource=#3,%
+flashvars={%
+src=#3 % same path as in addresource!
+&autoPlay=true % default: false; if =true, automatically starts playback after activation (see option ‘activation)’
+&loop=true % if loop=true, media is played in a loop
+&controlBarAutoHideTimeout=0 %  time span before auto-hide
+}%
+]{}{StrobeMediaPlayback.swf}%
+}% end of the new command
+
+\usepackage{booktabs,siunitx}
+\usepackage{multirow}
+\usepackage[flushleft]{threeparttable}
+
+
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+
+\usepackage{animate}
+\usepackage{adjustbox}
+
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{biblatex}
+\usepackage{hyperref}
+\usetikzlibrary{shapes,
+                tikzmark}
+\tikzset{every tikzmarknode/.style={%
+        draw=red, semithick, inner sep=2pt}
+        % invisible/.style={opacity=0},
+        % tikzmarknode/.style={opacity=1},
+        % alt/.code args={<#1>#2#3}{%
+        % \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+        % },
+        }
+
+\tiny\bibliography{references.bib}
+\usetikzlibrary{calc}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argminB}{argmin}
+
+\definecolor{red}{rgb}{1.00,0.00,0.00}
+\definecolor{blue}{rgb}{0.00,0.00,1.00}
+\definecolor{dblue}{rgb}{0.00,0.00,0.40}
+\definecolor{green}{rgb}{0.4,1.00,0.0}
+\definecolor{dgreen}{rgb}{0.0,0.40,0.0}
+\definecolor{yellow}{rgb}{0.5,0.5,0.0}
+
+%\renewcommand<>{\item}[1]{\only#2{\beameroriginal{\item}{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+%This block of code defines the information to appear in the
+%Title page
+\title[]
+{\large Start Together - PDEM}
+
+\subtitle{}
+
+\author[Joel Baptista] % (optional)
+{Joel Baptista}
+
+\institute[VFU] % (optional)
+{
+  \inst{1}%
+  Department of Mechanical Engineering\\
+  University of Aveiro, Portugal
+  \and
+  \inst{2}%
+  Institute of Electronics and Informatics Engineering of Aveiro\\
+  University of Aveiro, Portugal
+
+}
+
+\date[2025/09/15] % (optional)
+{15/09/2025}
+
+
+\titlegraphic{\begin{center}
+\begin{tabular}{c}
+%\includegraphics[height=1cm]{img/cytedlogo} &
+\includegraphics[height=1cm]{img/Logo-UA-300x300} 
+\end{tabular}
+\end{center}
+}
+
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+
+%End of title page configuration block
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%---
+
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This block of code is for the table of contents after
+%the title page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+% \include{src/01-introduction}
+
+\section{The first year}
+\include{src/02-1st-year}
+
+\section{ML@UA}
+\include{src/03-ml-at-ua}
+
+\section{Kaggle competitions}
+\include{src/04-dr-monkeys}
+
+\section{Spring school}
+\include{src/05-invicta}
+
+\section{Closing statement}
+\include{src/06-closing}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
